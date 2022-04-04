@@ -46,6 +46,10 @@ function handleToDoSubmit(event) {
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveToDos();
+  if (toDos.length >= 7){
+    alert("과유불급! 7개 이상부터는 해결한 후, 또 추가하세요!");
+    console.log(toDos);
+  }
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
