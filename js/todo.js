@@ -20,6 +20,9 @@ function deleteToDo(event) {
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   saveToDos(); savedToDos
+  if(toDos.length < 5){
+    weather.classList.remove('hidden');
+  }
 }
 
 function paintToDo(newTodo) {
@@ -46,6 +49,9 @@ function handleToDoSubmit(event) {
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveToDos();
+  if(toDos.length >= 5){
+    weather.classList.add('hidden');
+  }
   if (toDos.length >= 7){
     alert("과유불급! 7개 이상부터는 해결한 후, 또 추가하세요!");
     console.log(toDos);
