@@ -6,17 +6,25 @@
   <link rel="stylesheet" href="style.css">
   <title>스터디윗미</title>
 </head>
+
 <body>
   <div class="textBox">
-    <h2 id="clock">00:00:00</h2>
+    <h2 id="clock"> 00:00:00 </h2>
     <h1 id="greeting" class="hidden"></h1>
+    <div class="Timer">
+      <span class="studyTime">오늘 공부한 시간은 무려</span>
+      <span class="timerClock">00:00:00</span>
+      <input class="timer_start" type="button" value=Start>
+      <input class="timer_stop" type="button" value=Pause>
+      <input class="timer_reset" type="button" value=Reset>
+    </div>
     <div class="inputBox">
       <form class="hidden" id="login-form">
         <input required maxlength="15" type="text" placeholder="🙋‍♂️이름을 입력하세요‍🙋‍♀️" />
-        <input type="submit" value="Log In" />
+        <input class="logIn" type="submit" value="Log In" />
       </form>
       <form id="todo-form">
-        <input type="text" placeholder="해야할 일 들을 적어주세요.📚" required/>
+        <input type="text" placeholder="해야할 일 들을 적어주세요.📚" required />
       </form>
     </div>
     <ul id="todo-list"></ul>
@@ -36,6 +44,9 @@
   <script src="js/background.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/timer.js">
+
+  </script>
 </body>
 
 </html>

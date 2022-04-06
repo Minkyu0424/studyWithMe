@@ -30,7 +30,25 @@ button{
   font-weight: 700;
   color:white;
 }
-
+.timerClock{
+  font-size: 4vh;
+  font-weight: 700;
+  color:white;
+  margin-left: 1vh;
+  margin-right: 1vh;
+}
+.timer_start,.timer_stop,.timer_reset{
+  background-color : white;
+  font-size: 2vh;
+  font-family: 'Gowun Batang', serif;
+  border: 0;
+}
+.logIn{
+  background-color : white;
+  font-size: 3vh;
+  font-family: 'Gowun Batang', serif;
+  border: 0;
+}
 #quote{
   font-size: 4vh;
   margin-top: 15vh;
@@ -47,6 +65,12 @@ button{
 }
 .hidden {
   display: none;
+}
+.studyTime{
+  font-size: 3vh;
+  font-family: 'Gowun Batang', serif;
+  color: white;
+  font-weight: 700;
 }
 @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
 
