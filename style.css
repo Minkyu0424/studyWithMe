@@ -1,10 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+body {
+  font-family: 'Gowun Batang', serif;
+  text-align: center;
+}
 button{
   background-color:transparent;
   border:0px transparent solid;
 }
+h4{
+  background-color: rgba(243, 239, 239, 0.6);
+  font-size: 2vh;
+  margin: 2vh;
+}
+.textBox{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.timeBox{
+  display: flex;
+  align-items: center;
+  font-size: 3vh;  
+  column-gap: 4vh;
+  color:white;
+}
 #clock{
   font-size: 7vh;
-  color:white;
 }
 #login-form input{
   margin-top:4vh;
@@ -12,7 +33,7 @@ button{
   font-size:2vh;
 }
 #greeting{
-    color: white;
+  color: white;
 }
 #todo-form input{
   width:300px;
@@ -22,13 +43,13 @@ button{
 }
 #todo-list{
   list-style:none;
-  padding-left:0px;
 }
 #todo-list li{
   font-size: 2vh;
   font-family: 'Gowun Batang', serif;
   font-weight: 700;
-  color:white;
+  color: black;
+  background-color: rgba(243, 239, 239, 0.6);
 }
 .timerClock{
   font-size: 4vh;
@@ -38,10 +59,8 @@ button{
   margin-right: 1vh;
 }
 .timer_start,.timer_stop,.timer_reset{
-  background-color : white;
   font-size: 2vh;
   font-family: 'Gowun Batang', serif;
-  border: 0;
 }
 .logIn{
   background-color : white;
@@ -50,18 +69,13 @@ button{
   border: 0;
 }
 #quote{
-  font-size: 4vh;
-  margin-top: 15vh;
+  font-size: 3vh;
+  margin-top: 10vh;
+  background-color: rgba(243, 239, 239, 0.6);
 }
 #quote div:last-child{
   font-size: 4vh;
   font-weight: 700;
-}
-#weather{
-  font-size: 4vh;
-  margin-top: 4vh;
-}
-#textBox{
 }
 .hidden {
   display: none;
@@ -72,13 +86,10 @@ button{
   color: white;
   font-weight: 700;
 }
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
-
-body {
-  font-family: 'Gowun Batang', serif;
-  text-align: center;
+.videoBox{
+  display: flex;
+  column-gap: 10vh;
 }
-
 .bgImage {
   /* 절대적인 위치를 계산한다 */
   position: absolute;
@@ -91,5 +102,4 @@ body {
   /* 쌓여있는 레이어 순서. -1을 입력하면 사진이 뒤로 밀리고 텍스트가 앞으로 온다 */
   z-index: -1;
   /* 0.5초 서서히 사진이 나타난다 */
-  animation: fadeIn 0.5s linear;
 }

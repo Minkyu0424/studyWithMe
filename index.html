@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>StudyWithMe</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
-  <title>스터디윗미</title>
-</head>
-
-<body>
-  <div class="textBox">
-    <h2 id="clock"> 00:00:00 </h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <div class="Timer">
-      <span class="studyTime">오늘 공부한 시간은 무려</span>
-      <span class="timerClock">00:00:00</span>
-      <input class="timer_start" type="button" value=Start>
-      <input class="timer_stop" type="button" value=Pause>
-      <input class="timer_reset" type="button" value=Reset>
+  <body>
+    <div class="textBox">
+      <div class="timeBox">
+        <h2 id="clock">00:00:00</h2>
+        <div id="weather">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <h1 id="greeting" class="hidden"></h1>
+      <div class="Timer">
+        <span class="studyTime">오늘 공부한 시간은 무려</span>
+        <span class="timerClock">00:00:00</span>
+        <input class="timer_start" type="button" value="Start" />
+        <input class="timer_stop" type="button" value="Pause" />
+        <input class="timer_reset" type="button" value="Reset" />
+      </div>
+      <div class="inputBox">
+        <form class="hidden" id="login-form">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="🙋‍♂️이름을 입력하세요‍🙋‍♀️"
+          />
+          <input class="logIn" type="submit" value="Log In" />
+        </form>
+        <form id="todo-form">
+          <input
+            type="text"
+            placeholder="해야할 일 들을 적어주세요.📚"
+            required
+          />
+        </form>
+      </div>
+      <ul id="todo-list"></ul>
+      <div class="videoBox">
+        <div id="video_1">
+          <h4>Lofi-Music</h4>
+          <iframe width="250vh" height="150vh" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="video_2">
+          <h4>Jazz-Music</h4>
+          <iframe width="250vh" height="150vh" src="https://www.youtube.com/embed/b1F2AVsJ05c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div id="video_3" cla>
+          <h4>Asmr-Sound</h4>
+          <iframe width="250vh" height="150vh" src="https://www.youtube.com/embed/N_g3AiXF-q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
+      </div>
+      <div id="quote">
+        <div></div>
+        <div></div>
+      </div>
     </div>
-    <div class="inputBox">
-      <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="🙋‍♂️이름을 입력하세요‍🙋‍♀️" />
-        <input class="logIn" type="submit" value="Log In" />
-      </form>
-      <form id="todo-form">
-        <input type="text" placeholder="해야할 일 들을 적어주세요.📚" required />
-      </form>
-    </div>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <div></div>
-      <div></div>
-    </div>
-    <div id="weather">
-      <div></div>
-      <div></div>
-    </div>
-  </div>
 
-  <script src="js/greeting.js"></script>
-  <script src="js/clock.js"></script>
-  <script src="js/quotes.js"></script>
-  <script src="js/background.js"></script>
-  <script src="js/todo.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/timer.js">
-
-  </script>
-</body>
-
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/timer.js"></script>
+  </body>
 </html>
