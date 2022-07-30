@@ -1,38 +1,33 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
-
 const TODOS_KEY = "todos";
 
 let toDos = [];
 
-
-function sayHello(item) {
-  console.log("Hello", item);
-}
-
 function saveToDos() {
   localStorage.setItem("todos", JSON.stringify(toDos));
-  }
+}
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
   li.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
-  saveToDos(); savedToDos
-  if(toDos.length < 5){
-    weather.classList.remove('hidden');
+  saveToDos();
+  savedToDos;
+  if (toDos.length < 5) {
+    weather.classList.remove("hidden");
   }
 }
 
 function paintToDo(newTodo) {
   const li = document.createElement("li");
-  li.id = newTodo.id
+  li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
-  button.innerText = "❌"
-  button.addEventListener("click", deleteToDo)
+  button.innerText = "❌";
+  button.addEventListener("click", deleteToDo);
   li.appendChild(span);
   li.appendChild(button);
   toDoList.appendChild(li);
@@ -45,16 +40,16 @@ function handleToDoSubmit(event) {
   const newTodoObj = {
     text: newTodo,
     id: Date.now(),
-  }
+  };
   toDos.push(newTodoObj);
   paintToDo(newTodoObj);
   saveToDos();
-  if(toDos.length >= 5){
-    weather.classList.add('hidden');
+  if (toDos.length >= 3) {
+    quote.classList.add("hidden");
+    author.classList.add("hidden");
   }
-  if (toDos.length >= 7){
+  if (toDos.length >= 7) {
     alert("과유불급! 7개 이상부터는 해결한 후, 또 추가하세요!");
-    console.log(toDos);
   }
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
